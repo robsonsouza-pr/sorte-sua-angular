@@ -1,0 +1,20 @@
+<p> Clique <a [routerLink]="['/resultado/cadastrar']">aqui</a> para incluir um resultado</p>
+
+<p-table [value]="resultados" [paginator]="true" [rows]="10" sortMode="multiple">
+    <ng-template pTemplate="header">
+        <tr>
+			<th>Sorteio</th>
+			<th>Loteria</th>
+			<th width="40%">Resultado</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-resultado>
+	<tr>
+		<td>{{resultado.numeroSorteio}}</td>
+		<td>{{resultado.loteria}}</td>
+		<td>{{resultado.dezenas}}</td>
+	</tr>
+    </ng-template>
+</p-table>
+<p *ngIf="!resultados"> Nenhum resultado encontrado!!! </p>
+

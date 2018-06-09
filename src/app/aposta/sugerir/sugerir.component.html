@@ -1,0 +1,45 @@
+<div class="row invoice-info">
+    <div class="col-xs-12">
+        <p class="lead">Sugestões de Apostas </p>
+    </div>
+</div>
+
+<div *ngIf="sugestao" class="col-xs-12 col-md-12">
+	<div class="col-xs-6 col-md-6">
+		<div class="place-info-box">
+			<div class="place-info-box-content" >
+				<span class="place-info-box-text">Dezenas Mais Sorteadas</span>
+				<span class="place-info-box-detail">{{sugestao.jogoMaisSorteados}}</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6 col-md-6">
+		<app-jogo-aleatorio></app-jogo-aleatorio>
+	</div>
+
+	<div class="col-xs-12">
+		<div class="place-info-box">
+
+			<p-table [value]="sugestao.relatorios" [paginator]="true" [rows]="10" sortMode="multiple">
+    			<ng-template pTemplate="header">
+        			<tr>
+            			<th>Dezena</th>
+            			<th>Quantidade</th>
+        			</tr>
+    			</ng-template>
+    			<ng-template pTemplate="body" let-relatorio>
+        			<tr>
+	            		<td>{{relatorio.valor}}</td>
+	            		<td>{{relatorio.quantidade}}</td>
+        			</tr>
+    			</ng-template>
+			</p-table>
+
+		</div>
+	</div>
+</div>
+
+<div *ngIf="!sugestao">
+	<p>Não foram encontradas as sugestões</p>
+</div>

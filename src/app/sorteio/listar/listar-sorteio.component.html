@@ -1,0 +1,21 @@
+<h1> Sorteios</h1>
+
+<p-table [value]="sorteios" [paginator]="true" [rows]="10" sortMode="multiple">
+    <ng-template pTemplate="header">
+        <tr>
+			<th>Concurso</th>
+			<th> Data </th>
+			<th> Loteria </th>
+			<th>  </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-sorteio>
+		<tr>
+			<td> {{sorteio.numero}}</td>
+			<td> {{sorteio.dataSorteio}}</td>
+			<td> {{sorteio.loteria}}</td>
+			<td> Ver Resultado </td>
+		</tr>
+    </ng-template>
+</p-table>
+<p> Para cadastrar um novo sorteio clique <a [routerLink]="['/sorteios/cadastrar']">aqui</a></p>

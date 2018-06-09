@@ -1,0 +1,15 @@
+	
+<div class="place-info-box">
+	<div class="place-info-box-content" *ngIf="aleatorio">
+		<span class="place-info-box-text">Jogo aleatório</span>
+		<span class="place-info-box-detail">{{aleatorio.jogoAleatorio}}</span>				
+
+		<div *ngIf="!aleatorio">
+			<p>Nenhum jogo foi gerado</p>
+		</div>
+
+		<div>
+			<button class="btn btn-primary btn-xs btn-block" (click)="gerar()"> Gerar</button>
+		<div>
+	</div>
+</div>

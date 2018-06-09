@@ -1,0 +1,47 @@
+<div class="wrapper">
+
+  <!-- Início do header -->
+  <header class="main-header">
+  <nav class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand"><b>Sorte sua</b></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling  routerLinkActive = "active"-->
+      <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li><a [routerLink]="['/loterias']">Loterias</a></li>
+            <li><a [routerLink]="['/aposta/conferir']">Aposta</a></li>
+            <li><a [routerLink]="['/resultados']">Resultados</a></li> 
+            <li><a [routerLink]="['/sorteios']">Sorteios</a></li>                       
+            <li><a [routerLink]="['/aposta/sugerir']">Sugestões</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+  </header>
+  <!-- Fim do header -->
+	
+<div class="content-wrapper">
+    <div class="container">
+
+		<router-outlet></router-outlet>
+	    </div>
+  </div>
+	 
+  <footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.0
+      </div>
+      <strong>Sorte sua</strong> Angular Application
+    </div>
+  </footer>
+
+</div>
